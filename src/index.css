@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+.dashed-line-transparent {
+    background-image: repeating-linear-gradient(90deg, #fe8522 0 9px, transparent 0 18px);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
