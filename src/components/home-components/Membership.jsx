@@ -7,11 +7,11 @@ const YearlyMembershipCard = () => {
     return (
         <div className="px-[33px] py-[25px] md:p-[55px]">
             <div
-                className="flex items-center border-[1px] border-[#0000001C] rounded-md 
+                className="flex items-center justify-center border-[1px] border-[#0000001C] rounded-md 
             p-[12px] md:py-[10px] md:px-[130px]"
             >
                 <MdOutlineSavedSearch color="#EA523C" size={25} />
-                <p className="font-Akkurat font-normal  text-[16px] leading-[20.34px] md:text-[20px] md:leading-[25.34px] text-[#EA523C]">Save 34% compared to monthly.</p>
+                <p className="font-Akkurat font-normal  text-[16px] leading-[20.34px] md:text-[20px] md:leading-[25.34px] text-[#EA523C] ">Save 34% compared to monthly.</p>
             </div>
             <div
                 className="bg-[#EA523C0A] mt-[30px] inline-block py-[5px] px-[10px] 
@@ -38,7 +38,7 @@ const YearlyMembershipCard = () => {
 
             <div className="flex justify-start  md:justify-center">
                 <div>
-                    <div className="  flex items-center pt-[22px] md:pt-[32px]">
+                    <div className="flex items-center pt-[22px] md:pt-[32px]">
                         <img src={checkIcon} alt="" />
                         <p className="pl-[19px] font-Akkurat font-normal text-[20px] leading-[25.34px] text-[#EA523C]">No bots</p>
                     </div>

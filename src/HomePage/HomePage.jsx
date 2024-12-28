@@ -10,7 +10,7 @@ import Reviews from '../components/home-components/Reviews';
 const HomePage = () => {
     return (
         <div className="bg-[#F6EFE5] overflow-x-hidden">
-            <div className="max-w-[1920px] mx-auto">
+            <div className="">
                 <Banner />
                 <NewCategory />
                 <HistoryMeetsAI />

@@ -8,7 +8,7 @@ const FollowAlong = () => {
     const isSm = useMediaQuery('(min-width: 300px)');
     return (
         <section className="px-[16px] md:px-[0px]">
-            <div className="flex justify-center pt-[78px] pb-[62px] md:pt-[109px] pb-md:[125px]">
+            <div className="flex justify-center pt-[78px] pb-[62px] md:pt-[109px] md:pb-[125px]">
                 {/* md view */}
                 <div className="hidden md:block">
                     <p className="font-Akkurat font-normal text-[45px] leading-[57.01px]">Follow along or</p>

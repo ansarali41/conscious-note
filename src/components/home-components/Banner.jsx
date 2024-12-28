@@ -1,11 +1,11 @@
-import heroSectionBg from '../../assets/images-old/hero-section-bg.png';
+import heroSectionBg from '../../assets/images/hero-section-bg.svg';
 import computerImg from '../../assets/images/computer-img.svg';
 import MyButton from '../../components/MyButton';
 import TopNavBar from '../../TopNavBar/TopNavBar';
 
 const Banner = () => {
     return (
-        <div className="max-w-[1920px] mx-auto relative">
+        <div className="relative">
             <div className="absolute top-2 md:top-3 left-4 md:left-7 z-10 w-[92%] md:w-[97%]">
                 <TopNavBar />
             </div>

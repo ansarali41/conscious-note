@@ -1,6 +1,6 @@
 const TwitterIcon = () => {
     return (
-        <svg width="38" height="38" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg" className="hover:text-[#EA523C] transition-colors duration-300">
+        <svg width="34" height="34" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg" className="hover:text-[#EA523C] transition-colors duration-300">
             <path
                 d="M9.91602 24.6076L15.8575 18.6675M15.8575 18.6675L9.91602 10.4409H13.8501L18.1426 16.3824L24.0827 10.4409M15.8575 18.6675L20.1472 24.6076H24.0827L18.1412 16.381"
                 stroke="currentColor"

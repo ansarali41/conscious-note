@@ -1,10 +1,11 @@
-// import heroSectionBg from '../../assets/images-old/hero-section-bg.png';
 import { useState } from 'react';
 import MyButton from '../MyButton';
+import MyInput from '../MyInput';
+import sectionBg from '../../assets/images/contact-form-bg.svg';
 
 const FAQItem = ({ title, content, isOpen, onClick }) => {
     return (
-        <div className={`my-[15px] rounded-[12px] border-[6px] border-solid ${isOpen ? 'border-[#EA523C0F]' : 'border-2 border-[#EA523C1A]'} bg-white`}>
+        <div className={`my-[15px] md:my-[22px] rounded-[12px] border-[6px] border-solid ${isOpen ? 'border-[#EA523C12]' : 'border-2 border-[#EA523C12]'} bg-white`}>
             <button type="button" className="flex items-center justify-between w-full p-5 text-left" onClick={onClick}>
                 <p className="font-Akkurat font-normal text-[22px] leading-[27.87px]">{title}</p>
                 <svg
@@ -18,7 +19,7 @@ const FAQItem = ({ title, content, isOpen, onClick }) => {
                 </svg>
             </button>
             <div className={`bg-white overflow-hidden transition-all duration-200 ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
-                <p className="p-5 font-Akkurat font-normal text-[18px] leading-[22.81px]">{content}</p>
+                <p className="px-[12px] py-[16px]  md:px-[26px] md:py-[23px] font-Akkurat font-normal text-[18px] leading-[22.81px]">{content}</p>
             </div>
         </div>
     );
@@ -27,39 +28,28 @@ const FAQItem = ({ title, content, isOpen, onClick }) => {
 const ContactUs = () => {
     return (
         <>
-            <p className="font-Akkurat font-normal text-[45px] leading-[57.01px]">Contact us</p>
+            <p className="font-Akkurat font-normal text-[26px] leading-[32px] md:text-[45px] md:leading-[57.01px] text-center md:text-start">Contact us</p>
 
-            <form className="bg-[#F8F2E9] border-6 border-solid border-[#F9F4EE] rounded-[12px] p-[30px]">
-                <p className="font-Akkurat font-normal text-[20px] leading-[25.34px]">Submit a question here to get in touch. We’re super responsive.</p>
-                <div className="flex gap-[30px]">
-                    <input
-                        type="text"
-                        className="border-[6px] border-solid  border-[#EA523C1A] rounded-[555px] bg-white p-[25px] w-full text-[20px] leading-[25.34px] placeholder:text-[#333333] focus:outline-none focus:ring-0"
-                        placeholder="First name..."
-                    />
+            <form
+                className="bg-[#F8F2E9] border-[5px] border-solid border-[#F9F4EE] rounded-[12px] px-[12px] py-[22px] md:p-[30px]"
+                style={{ backgroundImage: `url(${sectionBg})`, backgroundSize: 'cover' }}
+            >
+                <p className="font-Akkurat font-normal  text-[18px] leading-[22.34px] md:text-[20px] md:leading-[25.34px] text-center md:text-start text-[#333333]">
+                    Submit a question here to get in touch. We’re super responsive.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[22px] md:gap-[52px] pt-[22px] md:pt-[30px]">
+                    <MyInput placeholder="First name..." />
 
-                    <input
-                        type="text"
-                        className="border-[6px] border-solid  border-[#EA523C1A] rounded-[555px] bg-white p-[25px] w-full text-[20px] leading-[25.34px] placeholder:text-[#333333] focus:outline-none focus:ring-0"
-                        placeholder="Last name..."
-                    />
+                    <MyInput placeholder="Last name..." />
                 </div>
-                <div>
-                    <input
-                        type="email"
-                        className="border-[6px] border-solid  border-[#EA523C1A] rounded-[555px] bg-white p-[25px] w-full text-[20px] leading-[25.34px] placeholder:text-[#333333] focus:outline-none focus:ring-0"
-                        placeholder="Email..."
-                    />
+                <div className="pt-[22px] md:pt-[30px]">
+                    <MyInput placeholder="Email..." />
                 </div>
-                <div>
-                    <textarea
-                        className="border-[6px] border-solid  border-[#EA523C1A] rounded-[32px] bg-white p-[25px] w-full text-[20px] leading-[25.34px] placeholder:text-[#333333] focus:outline-none focus:ring-0 "
-                        rows="5"
-                        placeholder="How can we help you..."
-                    />
+                <div className="pt-[22px] md:pt-[30px]">
+                    <MyInput placeholder="How can we help you..." type="textarea" rows="5" />
                 </div>
                 <div className="flex justify-center pt-[30px]">
-                    <MyButton className="px-[86px]">Submit</MyButton>
+                    <MyButton className=" px-[42px] py-[8px] md:px-[86px] md:py-[13px]">Submit</MyButton>
                 </div>
             </form>
         </>
@@ -97,17 +87,31 @@ const ContactUsAndFaq = () => {
         },
     ];
     return (
-        <div className="max-w-[1920px] mx-auto">
-            <div className="px-[103px] py-[103px] pb-[140px]">
-                <div className="grid grid-cols-12 gap-[97px]">
-                    <div className="col-span-6">
+        <div className="max-w-[1920px] mx-auto px-[16px] md:px-[0px]">
+            <div className="flex justify-center pt-[78px] pb-[62px] md:pt-[185px] md:pb-[103px]">
+                {/* md view */}
+                <div className="hidden md:block">
+                    <p className="font-Akkurat font-normal text-[45px] leading-[57.01px]">The more you use it, the more it reveals about</p>
+                    <p className="font-['PP-Editorial-New'] font-normal italic text-[45px] leading-[57.6px] text-end pl-[735px] text-[#EA523C]">the days we have together</p>
+                </div>
+
+                {/* sm view */}
+                <div className="block md:hidden">
+                    <p className="font-Akkurat font-normal text-[33px] leading-[44.01px]">
+                        The more you use it, the more it reveals about <span className="font-['PP-Editorial-New'] font-black italic text-[#EA523C]">the days we have together</span>
+                    </p>
+                </div>
+            </div>
+            <div className="px-[0px] md:px-[103px]">
+                <div className="flex flex-col-reverse md:flex-row gap-[62px] md:gap-[97px]">
+                    <div className="w-full md:w-1/2">
                         <ContactUs />
                     </div>
 
-                    <div className="col-span-6">
+                    <div className="w-full md:w-1/2">
                         {/* FAQ Section */}
                         <div>
-                            <p className="font-Akkurat font-normal text-[45px] leading-[57.01px]">FAQs</p>
+                            <p className="font-Akkurat font-normal text-[26px] leading-[32px] md:text-[45px] md:leading-[57.01px] text-center md:text-start">FAQs</p>
                             <div>
                                 {faqItems.map((item, index) => (
                                     <FAQItem
