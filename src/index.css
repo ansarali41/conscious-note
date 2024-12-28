@@ -1,10 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'PP-Editorial-New';
+        src: local('PP-Editorial-New'), url('/fonts/PP-Editorial-New/PPEditorialNew-UltralightItalic.otf') format('truetype');
+    }
+    @font-face {
+        font-family: 'PP-Editorial-New-ultra-bold';
+        src: local('PP-Editorial-New-ultra-bold'), url('/fonts/PP-Editorial-New/PPEditorialNew-Ultrabold.otf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Akkurat';
+        src: local('Akkurat'), url('/fonts/Akkurat.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Uni-Sans';
+        src: local('Uni-Sans'), url('/fonts/Uni Sans Heavy.otf') format('truetype');
+    }
+}
 
 .dashed-line-transparent {
     background-image: repeating-linear-gradient(90deg, #fe8522 0 9px, transparent 0 18px);
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.css-1qltlow-MuiTabs-indicator {
+    background-image: linear-gradient(180deg, #ff9680 0%, #ea523c 76.5%) !important;
+    height: 6px !important;
+    border-radius: 8px !important;
+}

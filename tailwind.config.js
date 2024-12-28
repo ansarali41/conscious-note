@@ -1,24 +1,27 @@
+import flowbite from 'flowbite-react/tailwind';
 /** @type {import('tailwindcss').Config} */
 
 export default {
-    content: ['./src/**/*.{js,ts,jsx,tsx}'],
+    content: ['./src/**/*.{js,ts,jsx,tsx}', flowbite.content()],
     theme: {
         extend: {
             backgroundImage: {
                 'repeating-red-transparent': 'repeating-linear-gradient(90deg, #FE8522 0 15px, transparent 0 32px)',
             },
             colors: {
-                'brand-orange': '#FE8522',
-                'brand-orange-light': '#ffca9f',
-                'brand-yellow-light': '#fff8f0',
-                'brand-gray': ' #7D7D83',
-                'brand-blue': '#0A1740',
+                'brand-bg': '#F6EFE5',
+                'brand-orange': '#EA523C',
             },
             fontFamily: {
-                poppins: ['Poppins', 'sans-serif'],
-                spaceGrotesk: ['Space Grotesk', 'sans-serif'],
+                UniSans: ['Uni-Sans'],
+                Akkurat: ['Akkurat'],
+                PPEditorialNew: ['PP-Editorial-New'],
+                PPEditorialNewUltraBold: ['PP-Editorial-New-ultra-bold'],
+            },
+            scale: {
+                250: '2.50',
             },
         },
     },
-    plugins: [],
+    plugins: [flowbite.plugin()],
 };
